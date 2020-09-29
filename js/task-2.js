@@ -11,9 +11,11 @@ const users = [
 
 const toggleUserState = (allUsers, userName) => {
     return new Promise ((resolve) => {
-       resolve( allUsers.map(user =>
-            user.name === userName 
-            ? { ...user, active: !user.active } : user));
+    setTimeout(() => {
+      resolve( allUsers.map(user =>
+        user.name === userName 
+        ? { ...user, active: !user.active } : user));
+    }, 0);
     });
   };
   
